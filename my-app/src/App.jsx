@@ -1,10 +1,14 @@
+import FoodOption from "./components/FoodOption"
+import GroceryOption from "./components/GroceryOption"
 import Header from "./components/Header"
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-    </div>
+    <>
+      <Header></Header>
+      <FoodOption></FoodOption>
+      <GroceryOption></GroceryOption>
+    </>
   )
 }
 
