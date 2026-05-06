@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import Banner from "./components/Banner"
 import CitiesWithFood from "./components/CitiesWithFood"
 import CitiesWithGrocery from "./components/CitiesWithGrocery"
+import Footer from "./components/Footer"
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Banner></Banner>
       <CitiesWithFood></CitiesWithFood>
       <CitiesWithGrocery></CitiesWithGrocery>
+      <Footer></Footer>
     </>
   )
 }
