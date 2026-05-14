@@ -1,23 +1,17 @@
-import Dineoption from "./components/Dineoption"
-import FoodOption from "./components/FoodOption"
-import GroceryOption from "./components/GroceryOption"
-import Header from "./components/Header"
-import Banner from "./components/Banner"
-import CitiesWithFood from "./components/CitiesWithFood"
-import CitiesWithGrocery from "./components/CitiesWithGrocery"
-import Footer from "./components/Footer"
+import Banner from "./components/Banner";
+import CitiesWithFood from "./components/CitiesWithFood";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import RestaurantList from "./components/RestaurantList";
 
 const App = () => {
   return (
     <>
-      <Header></Header>
-      <FoodOption></FoodOption>
-      <GroceryOption></GroceryOption>
-      <Dineoption></Dineoption>
-      <Banner></Banner>
-      <CitiesWithFood></CitiesWithFood>
-      <CitiesWithGrocery></CitiesWithGrocery>
-      <Footer></Footer>
+    <Header></Header>
+    <RestaurantList></RestaurantList>
+    <Banner></Banner>
+    <CitiesWithFood></CitiesWithFood>
+    <Footer></Footer>
     </>
   )
 }

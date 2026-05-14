@@ -1,118 +1,188 @@
-import {Link} from "react-router-dom";
+// components/Header.jsx
+
+import {
+  ArrowUpRight,
+  ChevronDown,
+  MapPin,
+  Search,
+  ArrowRight,
+} from "lucide-react";
+
+const cards = [
+  {
+    title: "FOOD DELIVERY",
+    subtitle: "FROM RESTAURANTS",
+    offer: "UPTO 60% OFF",
+    image:
+      "https://media-assets.swiggy.com/portal/testing/seo-home/Food3BU.png",
+  },
+
+  {
+    title: "INSTAMART",
+    subtitle: "INSTANT GROCERY",
+    offer: "UPTO 60% OFF",
+    image:
+      "https://media-assets.swiggy.com/portal/testing/seo-home/Genie3BU.png",
+  },
+
+  {
+    title: "DINEOUT",
+    subtitle: "EAT OUT & SAVE MORE",
+    offer: "UPTO 50% OFF",
+    image:
+      "https://media-assets.swiggy.com/portal/testing/seo-home/Dineout.png",
+  },
+];
+
 const Header = () => {
   return (
-    <header className="bg-[#ff5200] overflow-hidden">
+    <section className="bg-[#ff5200] relative overflow-hidden min-h-screen">
       
-      {/* Navbar */}
-      <div className="flex justify-between items-center container mx-auto py-6 px-4">
-        <img
-          className="w-32 md:w-36 lg:w-40 object-contain"
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"
-          alt=""
-        />
+      {/* ================= NAVBAR ================= */}
+      <nav className="px-14 py-5 flex items-center justify-between relative z-20">
+        
+        {/* Logo */}
+        <a className="flex items-center gap-3">
+          <img
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_800,h_800/portal/m/logo_192x192.png"
+            alt="Swiggy Logo"
+            className="w-14 h-14 object-contain"
+          />
 
-        <div className="hidden md:flex items-center gap-6 text-white font-medium text-sm lg:text-base">
+          <h1 className="text-white text-[34px] font-bold leading-none">
+            Swiggy
+          </h1>
+        </a>
+
+        {/* Right Links */}
+        <div className="flex items-center gap-10">
+          
           <a
-            className="hover:text-gray-200 transition"
             href="https://www.swiggy.com/corporate/"
             target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-semibold text-[17px] hover:text-gray-200 transition"
           >
             Swiggy Corporate
           </a>
 
           <a
-            className="hover:text-gray-200 transition"
-            href="https://partner.swiggy.com/food/login"
+            href="https://partner.swiggy.com/login#/swiggy"
             target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-semibold text-[17px] hover:text-gray-200 transition"
           >
             Partner with us
           </a>
 
           <a
-            className="px-4 py-2 border border-white rounded-lg hover:bg-white hover:text-[#ff5200] transition"
-            href="https://partner.swiggy.com/food/login"
+            href="https://www.swiggy.com/app-download"
             target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white text-white px-7 py-4 rounded-2xl flex items-center gap-2 font-semibold hover:bg-white hover:text-[#ff5200] transition duration-300"
           >
             Get the App
+            <ArrowUpRight size={20} />
           </a>
 
           <a
-            className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-            href="https://partner.swiggy.com/food/login"
+            href="https://www.swiggy.com/login"
             target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black text-white px-10 py-4 rounded-2xl font-semibold hover:bg-gray-900 transition"
           >
             Sign in
           </a>
         </div>
+      </nav>
+
+      {/* ================= HERO SECTION ================= */}
+
+      {/* Left Image */}
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png"
+        alt="Veggies"
+        className="absolute left-0 top-28 w-[250px]"
+      />
+
+      {/* Right Image */}
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png"
+        alt="Sushi"
+        className="absolute right-0 top-28 w-[250px]"
+      />
+
+      {/* Hero Content */}
+      <div className="w-[55%] mx-auto flex flex-col items-center pt-10 relative z-10">
+        
+        <h1 className="text-white text-5xl font-extrabold text-center leading-[1.2]">
+          Order food & groceries.
+          <br />
+          Discover best restaurants.
+          <br />
+          Swiggy it!
+        </h1>
+
+        {/* Search Section */}
+        <div className="flex gap-5 mt-12 w-full justify-center">
+          
+          {/* Location Box */}
+          <div className="bg-white w-[340px] h-16 rounded-2xl flex items-center px-5 justify-between shadow-lg">
+            <div className="flex items-center gap-3">
+              <MapPin className="text-[#ff5200]" />
+
+              <span className="text-gray-700 font-medium text-lg">
+                Karol Bagh, New Delhi
+              </span>
+            </div>
+
+            <ChevronDown />
+          </div>
+
+          {/* Search Box */}
+          <div className="bg-white w-[500px] h-16 rounded-2xl flex items-center justify-between px-5 shadow-lg">
+            <input
+              type="text"
+              placeholder="Search for restaurant, item or more"
+              className="outline-none w-full text-lg text-gray-700"
+            />
+
+            <Search className="text-gray-500" />
+          </div>
+        </div>
       </div>
 
-      {/* Hero Section */}
-      <div className="pt-20 pb-12 relative text-center">
+      {/* ================= SERVICE CARDS ================= */}
 
-        {/* Left Image */}
-        <img
-          className="hidden md:block absolute top-0 left-0 h-[350px] lg:h-[420px]"
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png"
-          alt=""
-        />
+      <div className="w-[75%] mx-auto flex justify-center gap-8 mt-20 pb-20 relative z-10">
+        
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="bg-[#f2f2f2] rounded-[40px] p-8 w-[360px] h-[310px] relative overflow-hidden hover:scale-105 transition duration-300 cursor-pointer"
+          >
+            
+            <h1 className="text-4xl font-extrabold text-gray-800 leading-tight">
+              {card.title}
+            </h1>
 
-        {/* Right Image */}
-        <img
-          className="hidden md:block absolute top-0 right-0 h-[350px] lg:h-[420px]"
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png"
-          alt=""
-        />
+            <p className="text-lg text-gray-500 font-semibold mt-2">
+              {card.subtitle}
+            </p>
 
-        {/* Heading */}
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl mx-auto leading-tight">
-            Order food & groceries. Discover best restaurants. Swiggy it!
-          </h1>
-        </div>
+            <button className="bg-[#ffe8de] text-[#ff5200] px-4 py-2 rounded-full mt-6 font-bold">
+              {card.offer}
+            </button>
 
-        {/* Inputs */}
-        <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 mt-10 px-4">
-          <input
-            className="bg-white w-full md:w-[300px] lg:w-[320px] text-lg px-5 py-4 rounded-xl outline-none"
-            placeholder="Delhi, India"
-          />
+            {/* Arrow */}
+            <div className="bg-[#ff5200] text-white w-14 h-14 rounded-full flex items-center justify-center mt-12">
+              <ArrowRight />
+            </div>
 
-          <input
-            className="bg-white w-full md:w-[400px] lg:w-[500px] text-lg px-5 py-4 rounded-xl outline-none"
-            placeholder="Search for restaurant, item or more"
-          />
-        </div>
+          </div>
+        ))}
       </div>
-
-      {/* Bottom Cards */}
-<div className="container mx-auto flex justify-center gap-8 pb-14 px-4 flex-wrap">
-
-  <Link to="/food">
-    <img
-      className="w-44 md:w-56 lg:w-64 hover:scale-110 transition duration-300"
-      src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/23/ec86a309-9b06-48e2-9adc-35753f06bc0a_Food3BU.png"
-      alt="food"
-    />
-  </Link>
-
-  <Link to="/instamart">
-    <img
-      className="w-44 md:w-56 lg:w-64 hover:scale-110 transition duration-300"
-      src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/23/b5c57bbf-df54-4dad-95d1-62e3a7a8424d_IM3BU.png"
-      alt="instamart"
-    />
-  </Link>
-
-  <Link to="/dineout">
-    <img
-      className="w-44 md:w-56 lg:w-64 hover:scale-110 transition duration-300"
-      src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/23/b6d9b7ab-91c7-4f72-9bf2-fcd4ceec3537_DO3BU.png"
-      alt="dineout"
-    />
-  </Link>
-
-</div>
-    </header>
+    </section>
   );
 };
 
